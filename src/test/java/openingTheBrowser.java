@@ -17,6 +17,10 @@ public class openingTheBrowser {
         WebElement firstNameInput = driver.findElement(By.name("fname"));
         WebElement w3SchoolLink = driver.findElement(By.linkText("Visit W3Schools.com!"));
         WebElement googleLink = driver.findElement(By.partialLinkText("Weird"));
+        WebElement topSecretParagraph = driver.findElement(By.className("topSecret"));
+        WebElement firstInput = driver.findElement(By.tagName("input"));
+        WebElement firstLink = driver.findElement(By.tagName("a"));
+
 
     }
 }
