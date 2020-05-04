@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class takingTextFromElement {
+public class checkboxAndRadiobuttons {
     @Test
     public void googleOpenTest() {
         String driverPath = "C:\\Users\\chesh\\IdeaProjects\\TestySelenium\\src\\main\\resources\\executables\\executables.drivers\\chromedriver.exe";
@@ -26,4 +26,3 @@ public class takingTextFromElement {
 
     }
 }
-
