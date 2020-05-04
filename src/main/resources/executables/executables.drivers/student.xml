@@ -1,0 +1,28 @@
+<students>
+    <student>
+        <imie lang="en">John</imie>
+        <nazwisko>Kowalski</nazwisko>
+        <kierunek>Geologia</kierunek>
+        <rok>2</rok>
+        <grupa>1</grupa>
+    </student>
+</students>
+
+
+<!--
+parent - każdy element ma jednego rodzica,
+children - każdy element może mieć zero, jedno lub więcej dzieci,
+siblings - gałęzie, ktore maja tego samego rodzica,
+ancestors - rodzic galezi oraz rodzic rodzica gałezi itd,
+descendants - dziecko gałęzi oraz dzieci dziecka galęzi
+
+Lapanie po xpath
+/students/student/imie
+//imie
+/students//imie
+//imie[text()='John']
+//kierunek[text()='Geologia']
+//nazwisko[@lang='en']
+//nazwisko[@class='red']
+//xmlns:app="http://schemas.android.com/apk/res-auto"
+//*[text()='Kowalski']
