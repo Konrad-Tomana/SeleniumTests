@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class openingTheBrowser {
 
     @Test
@@ -19,8 +21,19 @@ public class openingTheBrowser {
         WebElement googleLink = driver.findElement(By.partialLinkText("Weird"));
         WebElement topSecretParagraph = driver.findElement(By.className("topSecret"));
         WebElement firstInput = driver.findElement(By.tagName("input"));
+
         WebElement firstLink = driver.findElement(By.tagName("a"));
 
+        List<WebElement> links = driver.findElements(By.tagName("a"));
+        if (links.size()>0) {
+            System.out.println("linki istnieją");
+        } else {
+            System.out.println("linki nie istnieją");
+        }
+
+        WebElement clickOnMeCss = driver.findElement(By.cssSelector("#clickOnMe"));
+        WebElement clickOnMeXpath = driver.findElement(By.xpath("//*[@id='clickOnMe']"));
+        WebElement clickh1 = driver.findElement(By.xpath("/html/body/h1"));
 
     }
 }
