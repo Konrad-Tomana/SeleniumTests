@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class hiddenText {
+public class picturesCapture {
 
     @Test
     public void googleOpenTest() {
@@ -14,12 +14,10 @@ public class hiddenText {
         driver.manage().window().maximize();
         driver.get("D://CP//Files//test.html");
 
-        WebElement paragraph = driver.findElement(By.className("topSecret"));
-        System.out.println("Mój tekst to: " + paragraph.getText()); // intuicyjnie nie zadziala
-        System.out.println("Mój tekst to: " + paragraph.getAttribute("value")); // to też,
-        System.out.println("Mój tekst to: " + paragraph.getAttribute("textContent") + " Solution: for hidden text use getAttribute string name \"testContent\"");
-        // for hidden text use getAttribute string name "testContent"
-        //driver.quit();
-
+        WebElement picture = driver.findElement(By.id("smileImage"));
+        System.out.println(picture.getAttribute("naturalHeight"));
+        System.out.println(picture.getSize().getWidth());//jeżeli wysokość obrazka jest 0 to znaczy, ze nie ywswietlil sie prawidlowo.
+        System.out.println(picture.getSize().getHeight());
+        driver.quit();
     }
 }
