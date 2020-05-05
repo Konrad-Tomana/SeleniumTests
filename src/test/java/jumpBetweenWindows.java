@@ -22,6 +22,8 @@ public class jumpBetweenWindows {
         switchToNewWindow(driver,currentWindowName);
         System.out.println("Tytul strony to: " + driver.getTitle());
         System.out.println("Obecny URL to: " + driver.getCurrentUrl());
+        driver.switchTo().window(currentWindowName); //powrót na pierwszą stronę
+        driver.findElement(By.name("username")).sendKeys(" Mouse");
 
     }
 
