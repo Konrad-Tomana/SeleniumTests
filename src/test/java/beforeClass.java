@@ -18,11 +18,11 @@ public class beforeClass    {
             System.setProperty("webdriver.chrome.driver", driverPath);
             driver = new ChromeDriver();
             driver.manage().window().maximize();
+            System.out.println("Before class");
         }
 
         @Test
         public void beforeclass() throws InterruptedException {
-            System.out.println("Before class");
             driver.get("https://www.google.com");
             WebElement searchInput = driver.findElement(By.name("q"));
             searchInput.sendKeys("Selenium");
