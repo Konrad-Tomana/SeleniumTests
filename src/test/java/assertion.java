@@ -27,7 +27,7 @@ public class assertion {
 
         Assert.assertEquals(driver.getTitle(),expectedTitle);
         Assert.assertNotEquals("TEST1", "TEST2");
-        Assert.assertTrue(expectedTitle.equals(driver.getTitle()));
+        Assert.assertEquals(driver.getTitle(), expectedTitle);
         Assert.assertTrue(driver.getTitle().equals("Automated Selenium Testing - Ghost Inspector"), "titles are not equal");
 
         driver.quit();
