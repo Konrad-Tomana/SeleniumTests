@@ -9,6 +9,7 @@ public class DoubleClickTest  extends BaseSeleniumTest {
 
     @Test
     public void doubleClickTest () {
+        SeleniumHelper helper = new SeleniumHelper(driver);
         driver.get("file:///D:/CP/Files/DoubleClick.html");
         Actions action = new Actions (driver); /* Actions (- klasa) action (- obiekt) = new Actions (driver) -
              parametr konstruktora, pobierany z klasy nadrzednej BaseSeleniumTest w ktorej jest inicjalizowany; */
@@ -19,6 +20,7 @@ public class DoubleClickTest  extends BaseSeleniumTest {
 
         action.doubleClick(driver.findElement(By.id("bottom"))).build().perform(); /* metoda doubleClick klasy action w której odwołuję
         się do metody konstruktora klasy nadrzędnej z którego pomocą odnajduję element na stronie.*/
+        helper.takeScreenshot();
         Assert.assertTrue(driver.getWindowHandles().size()>1); //sprawdzenie czy mamy więcej niż 1 okno otwarte
 
     }
