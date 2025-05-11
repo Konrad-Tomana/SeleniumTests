@@ -9,7 +9,7 @@ public class actionsOnBrowserElements {
 
     @Test
     public void googleOpenTest(){
-        String driverPath = "C:\\Users\\chesh\\IdeaProjects\\TestySelenium\\src\\main\\resources\\executables\\executables.drivers\\chromedriver.exe";
+        String driverPath = "C:\\Users\\toman\\IdeaProjects\\TestySelenium\\src\\main\\resources\\executables\\executables.drivers\\chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", driverPath);
         WebDriver driver= new ChromeDriver();
         driver.manage().window().maximize();
